@@ -5,14 +5,19 @@
     box-sizing: border-box;
 }
 
-/* :root {
-
-
-} */
+:root {
+    --signal-rust: #f03701;
+    --cold-gray: #1a1818;
+    --binary-white: #f5f5f5;
+    --gap-space: 0.313rem;
+    --box-border: 2px solid var(--signal-rust);
+    --box-padding: 5px 10px;;
+}
 
 /* Visualizer Stylings */
 
 body {
+    background-image: url(img/vhsStatic.gif);
     display: grid;
     grid-template-columns: 1fr 2fr;
     /* grid-template-rows: repeat(5, 1fr); */
@@ -26,6 +31,18 @@ body {
 
 li {
     list-style-type: none;
+}
+
+#navbar ul li {
+    border: var(--binary-white) 2px solid;
+    width: 6.5rem;
+    padding: 2px;
+    text-align: center;
+}
+
+a:hover, a:focus {
+    color: var(--binary-white);
+    font-weight: bold;
 }
 
 #main {
@@ -43,11 +60,13 @@ li {
 
 /* Navbar */
 #navbar {
+    color: var(--binary-white);
     grid-area: navbar;
     grid-column: 1 / span 2;
-    background-color: aqua;
+    background-color: var(--signal-rust);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #navbar ul {
@@ -58,15 +77,15 @@ li {
     justify-content: center;
 }
 
-#intro {
-    background-color: lightblue;
-    grid-area: intro;
-    grid-column: 1 / span 2;
-    gap: 0.313rem;
-    display: flex;
+#navbar ul li a {
+    text-decoration: none;
+    color: var(--cold-gray);
+    font-size: 1.2rem;
 }
 
+/* Profile */
 .profile {
+    margin-left: 0.313rem;
     grid-area: profile;
     display: flex;
     flex-direction: column;
@@ -83,43 +102,82 @@ li {
 
 #profile-name {
     grid-area: profile-name;
+    background-color: var(--binary-white);
     font-size: 1.5rem;
     margin-bottom: 5px;
     text-align: center;
 }
 
 .profile-img {
+    border: solid 2px var(--binary-white);
     grid-area: profile-img;
     grid-row: 2 / 3;
     width: 100px;
+    border-radius: 0 0 4px 0;
 }
+
+.intro-container {
+    border: var(--box-border);
+    margin-right: var(--gap-space);
+    background: url(img/grid.jpg) center / cover;
+    color: var(--binary-white);
+}
+
+#intro-title {
+    background-color: var(--signal-rust);
+}
+
 
 #intro {
-    background-color: lightblue;
-
+    grid-area: intro;
+    grid-column: 1 / span 2;
+    gap: 0.313rem;
+    display: flex;
+    margin-top: 0.75rem;
+    margin-bottom: var(--gap-space);
 }
-
+#intro p {
+    padding: var(--box-padding);
+}
+/* Background Section */
 #background {
     grid-area: bg;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-        "socials-container background-bio";
-    background-color: lightgreen;
+    "socials-container background-bio";
+    gap: var(--gap-space);
+    margin-right: var(--gap-space);
+    margin-left: var(--gap-space);
+    /* background-color: lightgreen; */
     /* display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: row; */
 }
 
+#socials-title ,
+#background-title,
+#interests-title {
+    background-color: var(--signal-rust);
+    width: 100%;
+    text-align: center;
+}
+
 .background-bio {
     grid-area: background-bio;
+    border: var(--box-border);
     display: flex;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     flex-direction: column;
     max-width: 600px;
+    background: url(img/grid.jpg) center / cover;
+}
+.background-bio p {
+    color: var(--binary-white);
+    padding: 5px 10px;
 }
 
 /* Socials Section */
@@ -128,10 +186,12 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    background: url(img/grid.jpg) center / cover;
+    border: solid 2px var(--signal-rust);
 }
 
 .socials-container ul {
+    padding: 5px;
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -145,24 +205,39 @@ li {
     display: flex;
     justify-content: left;
     align-items: center;
+    color: var(--binary-white);
 }
 
-.media-icon {
+svg {
     width: 24px;
     height: 24px;
     margin-right: 10px;
     margin-left: 10px;
 }
 
+#fb-icon {
+    fill: #0866FF;
+    size: 24px;;
+}
+#gh-icon {
+    fill: var(--binary-white);
+    size: 24px;
+}
+#ig-icon {
+    fill: #E1306C;
+    size: 24px;
+}
+
 /* Interests Section */
 #interests {
     grid-area: interests;
-    background-color: lightpink;
+    background: url(img/grid.jpg) center / cover;
     grid-row: 4 / 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: var(--gap-space);
 }
 
 .interests-container {
@@ -170,6 +245,7 @@ li {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    border: var(--box-border);
 }
 
 .interests-bar {
@@ -199,13 +275,21 @@ body {
 
 
 footer {
+    margin-top: 0.75rem;
     grid-area: footer;
-    background-color: lightgray;
+    background-color: var(--signal-rust);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-body {}
 
 /* Visualizer styles */
 
 /* Google Fonts */
+
+.pixelify-sans {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
