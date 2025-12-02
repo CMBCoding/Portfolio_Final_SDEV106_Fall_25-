@@ -1,0 +1,209 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* :root {
+
+
+} */
+
+/* Visualizer Stylings */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    /* grid-template-rows: repeat(5, 1fr); */
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas:
+    "navbar navbar"
+    "main main"
+    "footer footer";
+    height: 100vh;
+}
+
+li {
+    list-style-type: none;
+}
+
+#main {
+    grid-area: main;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+    "intro intro"
+    "bg bg"
+    "interests interests" ;
+}
+
+/* Navbar */
+#navbar {
+    grid-area: navbar;
+    grid-column: 1 / span 2;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro {
+    background-color: lightblue;
+    grid-area: intro;
+    grid-column: 1 / span 2;
+    gap: 0.313rem;
+    display: flex;
+}
+
+.profile {
+    grid-area: profile;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas:
+    "profile-name"
+    "profile-img"
+    "profile-img"
+    ; */
+    grid-column: 1 / span 2;
+    /* background-color: lightsalmon; */
+}
+#profile-name {
+    grid-area: profile-name;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.profile-img {
+    grid-area: profile-img;
+    grid-row: 2 / 3;
+    width: 100px;
+}
+
+#intro {
+    background-color: lightblue;
+
+}
+#background {
+    grid-area: bg;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "socials-container background-bio";
+    background-color: lightgreen;
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row; */
+}
+
+.background-bio {
+    grid-area: background-bio;
+    display: flex;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+/* Socials Section */
+.socials-container {
+    grid-area: socials-container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.socials-container ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.socials-container ul li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.media-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Interests Section */
+#interests {
+    grid-area: interests;
+    background-color: lightpink;
+    grid-row: 4 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.interests-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.interests-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* 
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+    "navbar navbar"
+    "main main"
+    /* "intro intro"
+    "bg bg"
+    "interests interests" 
+    "footer footer";
+    height: 100%;
+} */
+
+
+
+footer {
+    grid-area: footer;
+    background-color: lightgray;
+} 
+
+
+body {
+
+}
+
+/* Visualizer styles */
+
+/* Google Fonts */
