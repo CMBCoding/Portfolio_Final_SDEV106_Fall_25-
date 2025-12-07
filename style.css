@@ -1,4 +1,4 @@
-/* Global Styles */
+/*-------------------------- Global Styles --------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +17,6 @@
     --box-padding: 5px 10px;;
 }
 
-/* Visualizer Stylings */
-
 body {
     background-image: url(img/vhsStatic.gif);
     display: grid;
@@ -36,21 +34,8 @@ li {
     list-style-type: none;
 }
 
-#navbar ul li {
-    border: var(--binary-white) 2px solid;
-    width: 6.5rem;
-    padding: 2px;
-    text-align: center;
-}
 
-/* #navbar ul li a:focus {
-    border: var(--binary-white) 2px solid;
-    width: 6.5rem;
-    padding: 2px;
-    text-align: center;
-} */
-
-/* Navbar */
+/*-------------------------- Navbar --------------------------*/
 #navbar {
     color: var(--binary-white);
     grid-area: navbar;
@@ -74,6 +59,12 @@ li {
     color: var(--cold-gray);
     font-size: 1.2rem;
 }
+#navbar ul li {
+    border: var(--binary-white) 2px solid;
+    width: 6.5rem;
+    padding: 2px;
+    text-align: center;
+}
 
 #navbar ul li:hover,
 #navbar ul li:focus {
@@ -87,18 +78,18 @@ li {
     background-color: var(--binary-white);
 }
 
-/* Biography/Main Section */
+/*-------------------------- Main Index Pages --------------------------*/
 #bio-main {
     grid-area: main;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     /* grid-template-rows: repeat(2, 1fr); */
     grid-template-rows: 1fr 2fr;
     grid-template-areas:
-        "intro intro"
-        "bg bg"
-        "interests interests";
+        "intro intro interests"
+        "bg bg interests"
+        "bg bg socials";
 }
 
 #projects-main {
@@ -113,7 +104,7 @@ li {
         "projects projects";
 }
 
-/* Intro Section */
+/*-------------------------- Intro Section --------------------------*/
 #intro {
     grid-area: intro;
     grid-column: 1 / span 2;
@@ -127,7 +118,8 @@ li {
 
 .intro-container {
     width: 100%;
-    height: 160px;
+    min-height: 160px;
+    height: 100%;
     border: var(--box-border);
     background: url(img/grid.jpg) center / cover;
     color: var(--binary-white);
@@ -137,8 +129,17 @@ li {
     background-color: var(--signal-rust);
 }
 
+#intro ul {
+    margin-left: 1.5rem;
+}
+
+#intro ul li {
+    list-style-type: square;
+}
+
 #intro p {
     padding: var(--box-padding);
+    font-size: 1.5rem;
 }
 
 /* Profile */
@@ -177,7 +178,7 @@ li {
     border-radius: 0 0 4px 0;
 }
 
-/* Background Section */
+/*-------------------------- Background Section --------------------------*/
 #background {
     grid-area: bg;
     display: grid;
@@ -202,21 +203,34 @@ li {
     grid-area: background-bio;
     border: var(--box-border);
     display: flex;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-column: 1 / 3;
     flex-direction: column;
-    /* max-width: 600px; */
     background: url(img/grid.jpg) center / cover;
 }
 .background-bio p {
     color: var(--binary-white);
+    font-size: 2rem;
     padding: 5px 10px;
 }
 
-/* Socials Section */
-.socials-container {
-    grid-area: socials-container;
+/*-------------------------- Socials Section --------------------------*/
+#socials-section {
+    grid-area: socials;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: var(--gap-space-lg);
+}
+
+.socials-container-mobile {
+    display: none;
+}
+
+.socials-container {
+    display: flex;
+    height: fit-content;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     background: url(img/grid.jpg) center / cover;
@@ -261,12 +275,11 @@ svg {
     size: 24px;
 }
 
-/* Interests Section */
+/*-------------------------- Interests Section --------------------------*/
 #interests {
     margin: 0.75rem;
     grid-area: interests;
     background: url(img/grid.jpg) center / cover;
-    grid-row: 4 / 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -278,6 +291,7 @@ svg {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    height: 100%;
     width: 100%;
     border: var(--box-border);
 }
@@ -448,6 +462,53 @@ svg {
     } */
 
 /* Biography/Main Section */
+
+#bio-main {
+    grid-area: main;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+        "intro intro"
+        "bg bg"
+        "interests interests";
+}
+
+.socials-container-mobile {
+    display: flex;
+    grid-area: socials;
+    height: fit-content;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: url(img/grid.jpg) center / cover;
+    border: solid 2px var(--signal-rust);
+}
+
+.socials-container {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: url(img/grid.jpg) center / cover;
+    border: solid 2px var(--signal-rust);
+}
+
+.socials-container-mobile ul {
+    padding: 5px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+
 #bio-main,
 #projects-main {
     grid-template-rows: 280px 4fr;
@@ -458,6 +519,10 @@ svg {
     }
 
     /* Intro Section */
+    #intro {
+        width: 100%;
+        margin: var(--gap-space-lg);
+    }
     .intro-container {
         width: 100%;
         height: 80%;
@@ -465,13 +530,42 @@ svg {
     }
 
     .profile {
-        margin-left: 0.313rem;
+        margin-left: unset;
         margin-right: var(--gap-space-lg);
         grid-area: profile;
         display: flex;
         flex-direction: column;
         justify-content: center;
         grid-column: 1 / span 2;
+    }
+
+    /* Interests Section */
+    #interests {
+        width: 100%;
+    }
+
+    /* Background Section */
+    #background {
+        grid-area: bg;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "socials background-bio";
+        gap: var(--gap-space-lg);
+        /* margin: 0.75rem; */
+    }
+    .background-bio {
+        grid-area: background-bio;
+        border: var(--box-border);
+        display: flex;
+        flex-direction: column;
+        background: url(img/grid.jpg) center / cover;
+    }
+
+    .background-bio p {
+        font-size: 1.5rem;
     }
 
     /* Projects Section */
