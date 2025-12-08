@@ -32,8 +32,14 @@ body {
 
 li {
     list-style-type: none;
+    font-size: 1.5rem;
+    color: var(--binary-white);
 }
 
+.bold-green {
+    color: var(--status-green);
+    font-weight: bold;
+}
 
 /*-------------------------- Navbar --------------------------*/
 #navbar {
@@ -125,6 +131,14 @@ li {
     color: var(--binary-white);
 }
 
+#intro-bio-mobile {
+    display: none;
+}
+#intro-bio-desktop, 
+#intro-projects-desktop {
+    height: 205px;
+}
+
 #intro-title {
     background-color: var(--signal-rust);
 }
@@ -146,14 +160,11 @@ li {
 .profile {
     margin-left: 0.313rem;
     margin-right: var(--gap-space-lg);
-    /* grid-area: profile; */
     display: flex;
     flex-direction: column;
-    /* grid-column: 1 / span 2; */
 }
 
 #profile-name {
-    grid-area: profile-name;
     background-color: var(--binary-white);
     font-size: 1.5rem;
     margin-bottom: 5px;
@@ -162,7 +173,6 @@ li {
 
 .profile-img {
     border: solid 2px var(--binary-white);
-    grid-area: profile-img;
     border-radius: 0 0 4px 0;
     grid-row: 2 / 3;
     height: 118px;
@@ -188,6 +198,7 @@ li {
     "socials-container background-bio";
     gap: var(--gap-space);
     margin: 0.75rem;
+    height: fit-content;
 }
 
 #socials-title ,
@@ -202,7 +213,6 @@ li {
 .background-bio {
     grid-area: background-bio;
     border: var(--box-border);
-    display: flex;
     grid-column: 1 / 3;
     flex-direction: column;
     background: url(img/grid.jpg) center / cover;
@@ -255,6 +265,25 @@ li {
     color: var(--binary-white);
 }
 
+.social-link {
+    font-size: 1.2rem;
+    color: var(--status-green);
+    text-decoration: underline
+}
+.social-link:visited {
+    color: var(--frigid-blue);
+}
+
+.social-link:hover,
+.social-link:focus {
+    font-weight: bold;
+    color: var(--signal-rust);
+}
+.social-link:active {
+    color: var(--binary-white);
+}
+
+
 svg {
     width: 24px;
     height: 24px;
@@ -262,10 +291,7 @@ svg {
     margin-left: 10px;
 }
 
-#fb-icon {
-    fill: #0866FF;
-    size: 24px;;
-}
+#sm-logo,
 #gh-icon {
     fill: var(--binary-white);
     size: 24px;
@@ -287,13 +313,92 @@ svg {
 }
 
 .interests-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-space-lg);
     height: 100%;
     width: 100%;
     border: var(--box-border);
+    padding: var(--gap-space-lg);
+}
+
+.interests-tile {
+    color: var(--binary-white);
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "tile-border tile-content"
+    ;
+    flex-direction: row;
+    border: var(--box-border);
+}
+
+.games-tile, .history-tile {
+    display: flex;
+    width: 100%;
+    flex-direction: row ;
+}
+.otaku-tile {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    flex-direction: column ;
+}
+
+.games-tile-img {
+    width: 33%;
+    height: 150px;
+}
+.history-tile-img {
+    width: 50%;
+    height: 150px;
+}
+.otaku-tile-img {
+    width: 100%;
+    height: 120px;
+}
+
+.tile-border {
+    grid-area: tile-border;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--signal-rust);
+    padding-top: 1rem;
+    width: 3rem;
+}
+
+.tile-content {
+    grid-area: tile-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.tile-content p {
+    padding: var(--gap-space);
+}
+
+.tile-title {
+    transform: rotate(90deg);
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.tile-icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title-img {
+    width: 100%;
+    height: 150px;
 }
 
 .interests-bar {
@@ -384,11 +489,9 @@ svg {
     border: solid 2px var(--binary-white);
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    /* width: auto; */
     width: 400px;
     height: 180px;
     border-radius: 0 0 4px 0;
-    /* margin-left: 10px; */
 }
 
 /* Projects Desciption Section */
@@ -454,12 +557,6 @@ svg {
 ***************************************************************************/
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
-/* #projects-main {
-        grid-area: main;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    } */
 
 /* Biography/Main Section */
 
@@ -468,8 +565,7 @@ svg {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    /* grid-template-rows: repeat(2, 1fr); */
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: auto;
     grid-template-areas:
         "intro intro"
         "bg bg"
@@ -481,7 +577,6 @@ svg {
     grid-area: socials;
     height: fit-content;
     width: 100%;
-    height: 100%;
     flex-direction: column;
     align-items: center;
     background: url(img/grid.jpg) center / cover;
@@ -518,27 +613,47 @@ svg {
         grid-column: 1 / span 2;
     }
 
-    /* Intro Section */
+ /* Intro Section */
+
     #intro {
-        width: 100%;
         margin: var(--gap-space-lg);
+        gap: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
     }
+
     .intro-container {
         width: 100%;
         height: 80%;
         align-self: center;
     }
+    #intro-title {
+        font-size: 1.4rem;
+    }
+    #intro p {
+        padding: var(--box-padding);
+        font-size: 1rem;
+    }
+
+    #intro-bio-mobile {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #intro-bio-desktop {
+        display: none;
+    }
 
     .profile {
-        margin-left: unset;
-        margin-right: var(--gap-space-lg);
         grid-area: profile;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        grid-column: 1 / span 2;
     }
 
+    
     /* Interests Section */
     #interests {
         width: 100%;
@@ -552,9 +667,9 @@ svg {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
         grid-template-areas:
-            "socials background-bio";
+            "socials socials"
+            "background-bio background-bio";
         gap: var(--gap-space-lg);
-        /* margin: 0.75rem; */
     }
     .background-bio {
         grid-area: background-bio;
@@ -603,10 +718,7 @@ svg {
 
     .project-desc {
         grid-area: project-desc;
-        /* width: 160px; */
         width: 100%;
-        /* grid-column: 2 / 3;
-        grid-row: 2 / 3; */
     }
     .project-desc p {
         color: var(--binary-white);
@@ -620,49 +732,17 @@ svg {
 
     .project-img {
         display: block;
-        /* grid-column: 1 / 2;
-        grid-row: 2 / 3; */
-        /* width: 100%;
-        max-width: 150px; */
-        /* width: auto; */
+
         width: 120px;
         padding: 0px;
         height: 80px;
         align-self: center;
         border: solid 2px var(--binary-white);
         margin-left: 10px;
-        /* max-width: 100%;
-        max-height: 150px; */
+
     }
 
 }
-
-/* #project1, #project2, #project3, #project4, #project5, #project6 {
-    border: var(--box-border);
-    background-color: var(--cold-gray);
-    color: var(--binary-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-} */
-
-/* 
-body {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 5fr 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-areas:
-    "navbar navbar"
-    "main main"
-    /* "intro intro"
-    "bg bg"
-    "interests interests" 
-    "footer footer";
-    height: 100%;
-} */
 
 
 

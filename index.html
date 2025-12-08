@@ -35,35 +35,49 @@
                 <img src="img/profile.jpg" alt="profile picture" class="profile-img">
                 <img src="img/fineGreen.webp" alt="EKG monitor graphic" class="profile-graphic">
             </div>
-            <div class="intro-container">
-                <h1 id="intro-title" aria-label="Bio header">Corey Michael Brown</h1>
-                <p><strong>Born:</strong> 10/20/1995</p>
-                <p><strong>Location:</strong> Puyallup, WA</p>
-                <ul>
-                    <li><strong>Former:</strong> Assistant Language Teacher</li>
-                    <li><strong>Current:</strong>Student/Assistant Restaurant Manager</li>
-                </ul>
+            <!-- Intro Section - Mobile -->
+            <div class="intro-container" id="intro-bio-mobile">
+                <h1 id="intro-title" aria-label="Bio header">Corey Brown</h1>
+                    <p>Born: 10/20/1995</p>
+                    <p>Location:<br> Puyallup, WA</p>
+                    <p>Former:<br> Assistant Language Teacher</p>
+                    <p>Current:<br>Student/Assistant Restaurant Manager</p>
+            </div>
+            <!-- Intro Section - Desktop -->
+            <div class="intro-container" id="intro-bio-desktop">
+                    <h1 id="intro-title" aria-label="Bio header">Corey Brown</h1>
+                    <p><strong>Born:</strong> 10/20/1995</p>
+                    <p><strong>Location:</strong> Puyallup, WA</p>
+                    <ul>
+                        <li><strong>Former:</strong> Assistant Language Teacher</li>
+                        <li><strong>Current:</strong>Student/Assistant Restaurant Manager</li>
+                    </ul>
             </div>
         </section>
 
         <!-- Background Section -->
         <section id="background" aria-label="main section">
-        <!-- Social's Section -->
+        <!-- Social's Section - Mobile -->
             <div class="socials-container-mobile" aria-label="socials container">
             <h2 id="socials-title" aria-label="socials title">Socials</h2>
                 <ul>
-                    <li><svg alt="Facebook logo" class="media-icon" aria-label="Facebook logo" id="fb-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <title>Facebook</title>
-                        <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
-                    </svg>Facebook</li>
-                    <li><svg alt="Github logo" class="media-icon" aria-label="Github logo" id="gh-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <title>GitHub</title>
-                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                    </svg><a href="https://github.com/CMBCoding">Github</a></li>
-                    <li><svg alt="Instagram log" class="media-icon" aria-label="Instagram logo" id="ig-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <title>Instagram</title>
-                        <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
-                    </svg>Instagram</li>
+                    <li><svg alt="Steam logo" class="media-icon" aria-label="Steam logo" id="sm-logo" fill="#FFFFFF" viewBox="0 0 32 32"
+            version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#FFFFFF">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <title>steam</title>
+                <path
+                    d="M18.102 12.129c0-0 0-0 0-0.001 0-1.564 1.268-2.831 2.831-2.831s2.831 1.268 2.831 2.831c0 1.564-1.267 2.831-2.831 2.831-0 0-0 0-0.001 0h0c-0 0-0 0-0.001 0-1.563 0-2.83-1.267-2.83-2.83 0-0 0-0 0-0.001v0zM24.691 12.135c0-2.081-1.687-3.768-3.768-3.768s-3.768 1.687-3.768 3.768c0 2.081 1.687 3.768 3.768 3.768v0c2.080-0.003 3.765-1.688 3.768-3.767v-0zM10.427 23.76l-1.841-0.762c0.524 1.078 1.611 1.808 2.868 1.808 1.317 0 2.448-0.801 2.93-1.943l0.008-0.021c0.155-0.362 0.246-0.784 0.246-1.226 0-1.757-1.424-3.181-3.181-3.181-0.405 0-0.792 0.076-1.148 0.213l0.022-0.007 1.903 0.787c0.852 0.364 1.439 1.196 1.439 2.164 0 1.296-1.051 2.347-2.347 2.347-0.324 0-0.632-0.066-0.913-0.184l0.015 0.006zM15.974 1.004c-7.857 0.001-14.301 6.046-14.938 13.738l-0.004 0.054 8.038 3.322c0.668-0.462 1.495-0.737 2.387-0.737 0.001 0 0.002 0 0.002 0h-0c0.079 0 0.156 0.005 0.235 0.008l3.575-5.176v-0.074c0.003-3.12 2.533-5.648 5.653-5.648 3.122 0 5.653 2.531 5.653 5.653s-2.531 5.653-5.653 5.653h-0.131l-5.094 3.638c0 0.065 0.005 0.131 0.005 0.199 0 0.001 0 0.002 0 0.003 0 2.342-1.899 4.241-4.241 4.241-2.047 0-3.756-1.451-4.153-3.38l-0.005-0.027-5.755-2.383c1.841 6.345 7.601 10.905 14.425 10.905 8.281 0 14.994-6.713 14.994-14.994s-6.713-14.994-14.994-14.994c-0 0-0.001 0-0.001 0h0z">
+                </path>
+            </g>
+        </svg><a href="https://steamcommunity.com/id/RedHawkAssassin/" class="social-link">Steam</a></li>
+                    <li><svg alt="Github logo" class="media-icon" aria-label="Github logo" id="gh-icon" role="img" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <title>GitHub</title>
+                    <path
+                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg><a class="social-link" href="https://github.com/CMBCoding">Github</span></a></li>
                 </ul>
             </div>
             <div class="background-bio" aria-label="background bio">
@@ -79,38 +93,84 @@
         <section id="interests" aria-label="interests section">
             <h2 id="interests-title" aria-label="interests title"><span class="capital">I</span>nterests</h2>
             <div class="interests-container" aria-label="interests container">
-                <div class="interests-bar">
-                    <li><img src="" alt="Facebook logo" class="interests-icon" aria-label="Facebook logo">Facebook</li>
-                    <li><img src="" alt="Github logo" class="interests-icon" aria-label="Github logo">Github</li>
-                    <li><img src="" alt="Instagram logo" class="interests-icon" aria-label="Instagram logo">Instagram</li>
+            
+                <!-- Tile One -->
+                <div class="interests-tile">
+                    <div class="tile-border">
+                        <h3 class="tile-title">Video Games</h3>
+                        <img class="tile-icon" src="img/game-console.svg" alt="game console icon" aria-label="game console icon">
+                    </div>
+                    <div class="tile-content">
+                        <div class="games-tile">
+                            <img src="img/acIII.gif" alt="game clip gif" class="games-tile-img" aria-label="action game gif, counter attack">
+                            <img src="img/me3.gif" alt="game clip gif" class="games-tile-img" aria-label="action game gif, close combat">
+                            <img src="img/fc5.gif" alt="game clip gif" class="games-tile-img" aria-label="action game gif, shooting">
+                        </div>
+                        <p>From the Gameboy Advance, to the Playstatiopn 2, to graduating into a PC gamer, gaming has been a huge part of my life since childhood.</p>
+                        <p>I love exploring and getting immersed in new worlds. Some my favorite genres are <strong class="bold-green">RPGs, Horror,</strong> and <strong class="bold-green">Action Adventure</strong> titles</p>
+                    </div>
+                </div>
+
+                <!-- Tile Two -->
+                <div class="interests-tile">
+                    <div class="tile-border">
+                        <h3 class="tile-title">History</h3>
+                        <img class="tile-icon" src="img/globe-stand.svg" alt="globe icon" aria-label="globe icon">
+                    </div>
+                    <div class="tile-content">
+                        <div class="history-tile">
+                            <img src="img/theropod.jpg" title="Acrocanthosaurus" alt="dinosaur fossil" class="history-tile-img" aria-label="Acrocanthosaurus fossil">
+                            <img src="img/hiroshima.jpg" alt="Atomic Dome, Hiroshima" class="history-tile-img" aria-label="Atomic Dome, Hiroshima">
+                        </div>
+                        <p>Truth is stranger than fiction. I love learning about the past and how it shapes our present and future, be it via videos, books, or by visiting musuems or historial sites.</p>
+                        <p>Some of my favorite topics are <strong class="bold-green">Prehistoric Fauna, the Wild West,</strong> and <strong class="bold-green">Golden Age of Piracy</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Tile Three -->
+                <div class="interests-tile">
+                    <div class="tile-border">
+                        <h3 class="tile-title">Pop Culture</h3>
+                        <img class="tile-icon" src="img/pop-culture.svg" alt="pop culture icon" aria-label="pop culture icon">
+                    </div>
+                    <div class="tile-content">
+                        <div class="otaku-tile">
+                            <img src="img/godzilla.webp" title="Godzilla" alt="Godzilla movie poster" class="otaku-tile-img"
+                                aria-label="Godzilla movie poster">
+                            <img src="img/ghostrider.webp" alt="Ghost Rider comic cover" class="otaku-tile-img"
+                                aria-label="Ghost Rider comic book cover">
+                            <img src="img/models.jpg" title="Model kits" alt="Model kits" class="otaku-tile-img"
+                                aria-label="Assembled model kits">
+                        </div>
+                        <p>Movies, Sci-fi, Anime, Comics, Manga, I'm a nerd (not the smart kind) through and through.</p>
+                        <p>Some of my favorite franchises are <strong class="bold-green">Star Wars, Marvel,</strong> and <strong class="bold-green">Chainsaw Man</strong>.
+                        </p>
+                    </div>
                 </div>
             </div>
-            
         </section>
 
-        <!-- Social's Section -->
+        <!-- Social's Section - Desktop -->
         <section id="socials-section">
             <div class="socials-container" aria-label="socials container">
                 <h2 id="socials-title" aria-label="socials title">Socials</h2>
                 <ul>
-                    <li><svg alt="Facebook logo" class="media-icon" aria-label="Facebook logo" id="fb-icon" role="img"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <title>Facebook</title>
+                    <li><svg alt="Steam logo" class="media-icon" aria-label="Steam logo" id="sm-logo" fill="#FFFFFF" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#FFFFFF">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title>steam</title>
                             <path
-                                d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
-                        </svg>Facebook</li>
+                                d="M18.102 12.129c0-0 0-0 0-0.001 0-1.564 1.268-2.831 2.831-2.831s2.831 1.268 2.831 2.831c0 1.564-1.267 2.831-2.831 2.831-0 0-0 0-0.001 0h0c-0 0-0 0-0.001 0-1.563 0-2.83-1.267-2.83-2.83 0-0 0-0 0-0.001v0zM24.691 12.135c0-2.081-1.687-3.768-3.768-3.768s-3.768 1.687-3.768 3.768c0 2.081 1.687 3.768 3.768 3.768v0c2.080-0.003 3.765-1.688 3.768-3.767v-0zM10.427 23.76l-1.841-0.762c0.524 1.078 1.611 1.808 2.868 1.808 1.317 0 2.448-0.801 2.93-1.943l0.008-0.021c0.155-0.362 0.246-0.784 0.246-1.226 0-1.757-1.424-3.181-3.181-3.181-0.405 0-0.792 0.076-1.148 0.213l0.022-0.007 1.903 0.787c0.852 0.364 1.439 1.196 1.439 2.164 0 1.296-1.051 2.347-2.347 2.347-0.324 0-0.632-0.066-0.913-0.184l0.015 0.006zM15.974 1.004c-7.857 0.001-14.301 6.046-14.938 13.738l-0.004 0.054 8.038 3.322c0.668-0.462 1.495-0.737 2.387-0.737 0.001 0 0.002 0 0.002 0h-0c0.079 0 0.156 0.005 0.235 0.008l3.575-5.176v-0.074c0.003-3.12 2.533-5.648 5.653-5.648 3.122 0 5.653 2.531 5.653 5.653s-2.531 5.653-5.653 5.653h-0.131l-5.094 3.638c0 0.065 0.005 0.131 0.005 0.199 0 0.001 0 0.002 0 0.003 0 2.342-1.899 4.241-4.241 4.241-2.047 0-3.756-1.451-4.153-3.38l-0.005-0.027-5.755-2.383c1.841 6.345 7.601 10.905 14.425 10.905 8.281 0 14.994-6.713 14.994-14.994s-6.713-14.994-14.994-14.994c-0 0-0.001 0-0.001 0h0z">
+                            </path>
+                        </g>
+                    </svg><a href="https://steamcommunity.com/id/RedHawkAssassin/" class="social-link">Steam</a></li>
                     <li><svg alt="Github logo" class="media-icon" aria-label="Github logo" id="gh-icon" role="img"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title>GitHub</title>
                             <path
                                 d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                        </svg><a href="https://github.com/CMBCoding">Github</a></li>
-                    <li><svg alt="Instagram log" class="media-icon" aria-label="Instagram logo" id="ig-icon" role="img"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <title>Instagram</title>
-                            <path
-                                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
-                        </svg>Instagram</li>
+                        </svg><a class="social-link" href="https://github.com/CMBCoding">Github</span></a></li>
                 </ul>
             </div>
         </section>
