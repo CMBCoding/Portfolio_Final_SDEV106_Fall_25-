@@ -41,6 +41,18 @@ li {
     font-weight: bold;
 }
 
+#socials-title,
+#background-title,
+#interests-title,
+#projects-title,
+#education-title,
+#programming-title,
+#other-title {
+    background-color: var(--signal-rust);
+    width: 100%;
+    text-align: center;
+}
+
 /*-------------------------- Navbar --------------------------*/
 #navbar {
     color: var(--binary-white);
@@ -84,13 +96,15 @@ li {
     background-color: var(--binary-white);
 }
 
-/*-------------------------- Main Index Pages --------------------------*/
+/***************************************************************************
+                                Main Index Pages
+***************************************************************************/
+
 #bio-main {
     grid-area: main;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: repeat(2, 1fr); */
     grid-template-rows: 1fr 2fr;
     grid-template-areas:
         "intro intro interests"
@@ -108,6 +122,19 @@ li {
         "intro intro"
         "projects projects"
         "projects projects";
+}
+
+#resume-main {
+    grid-area: main;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr repeat(3, 1fr);
+    grid-template-areas:
+        "intro intro"
+        "edu edu"
+        "pg-skills pg-skills"
+        "skills skills";
 }
 
 /*-------------------------- Intro Section --------------------------*/
@@ -135,7 +162,8 @@ li {
     display: none;
 }
 #intro-bio-desktop, 
-#intro-projects-desktop {
+#intro-projects-desktop,
+#intro-resume-desktop {
     height: 205px;
 }
 
@@ -162,6 +190,17 @@ li {
     margin-right: var(--gap-space-lg);
     display: flex;
     flex-direction: column;
+}
+
+/* Profile Hover */
+.profile:hover #profile-name,
+.profile:focus #profile-name {
+    background-color: var(--frigid-blue);
+    color: var(--binary-white);
+}
+.profile:hover .profile-img,
+.profile:hover .profile-graphic {
+    border: solid 2px var(--frigid-blue);
 }
 
 #profile-name {
@@ -199,15 +238,6 @@ li {
     gap: var(--gap-space);
     margin: 0.75rem;
     height: fit-content;
-}
-
-#socials-title ,
-#background-title,
-#interests-title,
-#projects-title {
-    background-color: var(--signal-rust);
-    width: 100%;
-    text-align: center;
 }
 
 .background-bio {
@@ -432,10 +462,6 @@ svg {
     grid-template-areas:
         "project1 project2 project3"
         "project4 project5 project6";
-    /* grid-template-areas:
-        "project1 project2" 
-        "project3 project4" 
-        "project5 project6"; */
     gap: var(--gap-space-lg);
     padding: var(--gap-space-lg);
     width: 100%;
@@ -550,6 +576,155 @@ svg {
 }
 #project6 {
     grid-area: project6;
+}
+
+/*-------------------------- Education Section --------------------------*/
+
+#education-section {
+    margin: 0.75rem;
+    grid-area: edu;
+    background: url(img/grid.jpg) center / cover;
+    border: var(--box-border);
+    grid-row: 2 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "project1 project2 project3"
+        "project4 project5 project6";
+    gap: var(--gap-space-lg);
+    padding: var(--gap-space-lg);
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+}
+
+/*-------------------------- Skills/Programming Skill Section --------------------------*/
+
+#programming-section, 
+#other-section {
+    margin: 0.75rem;
+    background: url(img/grid.jpg) center / cover;
+    border: var(--box-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#programming-section {
+    grid-area: pg-skills;
+    grid-row: 2 / 5;
+}
+
+#other-section {
+    grid-area: skills;
+}
+
+.programming-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    /* grid-template-areas:
+        "project1 project2 project3"
+        "project4 project5 project6"; */
+    gap: var(--gap-space-lg);
+    padding: var(--gap-space-lg);
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: var(--gap-space-lg);
+    padding: var(--gap-space-lg);
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+}
+
+.skills-tile {
+    border: 2px solid var(--binary-white);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3rem 2fr 3rem;
+    /* grid-template-areas:
+        "skills-header skills-graphic"
+        "skills-content skills-content"
+        "skills-examples skills-examples"
+    ; */
+    grid-template-areas:
+            "skills-header skills-header"
+            "skills-content skills-content"
+            "skills-examples skills-examples"
+        ;
+}
+
+.skills-header {
+    grid-area: skills-header;
+    display: flex;
+    /* height: 50.7422px; */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--binary-white);
+    border-bottom: solid 2px var(--binary-white);
+}
+
+.skills-title {
+    grid-area: skills-title;
+    font-size: 2rem;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.skills-icons {
+    width: 40px;
+    height: 40px;
+}
+
+.skills-graphic {
+    /* grid-area: skills-graphic; */
+    /* border: solid 2px var(--binary-white); */
+    border-bottom: solid 1px var(--binary-white);
+    border-top: solid 1px var(--binary-white);
+    /* width: 100%;
+    min-width: 150px; */
+        width:150px;
+    height: auto;
+}
+
+.skills-content {
+    grid-area: skills-content;
+    color: var(--binary-white);
+    padding: var(--gap-space);
+}
+
+.skills-examples {
+    padding-left: var(--gap-space);
+    padding-right: var(--gap-space);
+    grid-area: skills-examples;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--binary-white);
+}
+
+.skill-img {
+    height: 2rem;
+    width: 2rem;
 }
 
 /***************************************************************************
