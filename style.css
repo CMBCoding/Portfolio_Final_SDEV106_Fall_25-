@@ -48,7 +48,7 @@ li {
     font-weight: bold;
 }
 
-#socials-title, #background-title, #interests-title,
+#socials-title, #socials-title-b, #background-title, #interests-title,
 #projects-title, #education-title, #education-title-b, 
 #programming-title, #other-title, #work-title {
     background-color: var(--signal-rust);
