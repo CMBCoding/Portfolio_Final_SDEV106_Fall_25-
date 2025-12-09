@@ -698,10 +698,6 @@ svg {
     padding: 5px;
     text-align: center;
 }
-#js-title {
-    font-size: 2rem;
-}
-
 .skills-icons {
     width: 35px;
     height: 35px;
@@ -955,7 +951,6 @@ svg {
 }
 
 /* Skills/Programming Skill Section */
-#js-title,
 #jp-title {
     font-size: 1rem;
 }
