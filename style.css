@@ -49,8 +49,8 @@ li {
 }
 
 #socials-title, #background-title, #interests-title,
-#projects-title, #education-title, #programming-title,
-#other-title, #work-title {
+#projects-title, #education-title, #education-title-b, 
+#programming-title, #other-title, #work-title {
     background-color: var(--signal-rust);
     width: 100%;
     text-align: center;
@@ -325,6 +325,12 @@ svg {
 
 #sm-logo,
 #gh-icon {
+    fill: var(--binary-white);
+    size: 24px;
+}
+
+#sm-logo-b,
+#gh-icon-b {
     fill: var(--binary-white);
     size: 24px;
 }
