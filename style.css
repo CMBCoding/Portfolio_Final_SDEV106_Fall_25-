@@ -40,14 +40,18 @@ li {
     color: var(--status-green);
     font-weight: bold;
 }
+.bold-orange {
+    color: #ffa500;
+    font-weight: bold;
+}
+.bold-red {
+    color: var(--signal-rust);
+    font-weight: bold;
+}
 
-#socials-title,
-#background-title,
-#interests-title,
-#projects-title,
-#education-title,
-#programming-title,
-#other-title {
+#socials-title, #background-title, #interests-title,
+#projects-title, #education-title, #programming-title,
+#other-title, #work-title {
     background-color: var(--signal-rust);
     width: 100%;
     text-align: center;
@@ -129,7 +133,8 @@ li {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    grid-auto-rows: auto;
     grid-template-areas:
         "intro intro"
         "edu edu"
@@ -578,32 +583,53 @@ svg {
     grid-area: project6;
 }
 
-/*-------------------------- Education Section --------------------------*/
+/*-------------------------- Education and Work History Section --------------------------*/
 
 #education-section {
     margin: 0.75rem;
     grid-area: edu;
     background: url(img/grid.jpg) center / cover;
     border: var(--box-border);
-    grid-row: 2 / 5;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.education-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "project1 project2 project3"
-        "project4 project5 project6";
-    gap: var(--gap-space-lg);
-    padding: var(--gap-space-lg);
+.education-container,
+.work-container {
+    color: var(--binary-white);
     width: 100%;
     background-color: transparent;
+    border: var(--box-border);
+    margin: var(--gap-space-lg);
+}
+
+#edu-wk-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
     height: 100%;
+    gap: var(--gap-space-lg);
+    padding: var(--gap-space-lg);
+}
+
+#edu-wk-wrapper ul li {
+    font-size: 1rem;
+    list-style-type: square;
+    margin-left: 1rem;
+}
+#edu-wk-wrapper ul,
+#edu-wk-wrapper h3 {
+    font-size: 1rem;
+    list-style-type: square;
+    margin: var(--gap-space);
+}
+
+#edu-wk-wrapper h3 {
+    text-decoration: underline;
+    font-weight: 800;
 }
 
 /*-------------------------- Skills/Programming Skill Section --------------------------*/
@@ -621,7 +647,6 @@ svg {
 
 #programming-section {
     grid-area: pg-skills;
-    grid-row: 2 / 5;
 }
 
 #other-section {
@@ -650,7 +675,14 @@ svg {
     padding: var(--gap-space-lg);
     width: 100%;
     background-color: transparent;
-    height: 100%;
+    height: fit-content;
+}
+
+#other-section .skills-container {
+    display: flex;
+}
+#other-section .skills-container .skills-tile {
+    width: 100%;
 }
 
 .skills-tile {
@@ -658,22 +690,16 @@ svg {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 3rem 2fr 3rem;
-    /* grid-template-areas:
-        "skills-header skills-graphic"
+    grid-template-areas:
+        "skills-header skills-header"
         "skills-content skills-content"
         "skills-examples skills-examples"
-    ; */
-    grid-template-areas:
-            "skills-header skills-header"
-            "skills-content skills-content"
-            "skills-examples skills-examples"
-        ;
+    ;
 }
 
 .skills-header {
     grid-area: skills-header;
     display: flex;
-    /* height: 50.7422px; */
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -685,23 +711,23 @@ svg {
     grid-area: skills-title;
     font-size: 2rem;
     width: 100%;
-    margin-bottom: 5px;
+    padding: 5px;
     text-align: center;
+}
+#js-title {
+    font-size: 2rem;
 }
 
 .skills-icons {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+    margin-left: var(--gap-space);
 }
 
 .skills-graphic {
-    /* grid-area: skills-graphic; */
-    /* border: solid 2px var(--binary-white); */
     border-bottom: solid 1px var(--binary-white);
     border-top: solid 1px var(--binary-white);
-    /* width: 100%;
-    min-width: 150px; */
-        width:150px;
+    width:150px;
     height: auto;
 }
 
@@ -725,6 +751,13 @@ svg {
 .skill-img {
     height: 2rem;
     width: 2rem;
+    margin: 0.5rem;
+} 
+
+.demo-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /***************************************************************************
@@ -780,7 +813,8 @@ svg {
 
 
 #bio-main,
-#projects-main {
+#projects-main,
+#resume-main {
     grid-template-rows: 280px 4fr;
 }
 
@@ -917,8 +951,13 @@ svg {
 
     }
 
-}
+    /* Skills/Programming Skill Section */
+    #js-title,
+    #jp-title {
+        font-size: 1rem;
+    }
 
+}
 
 
 footer {
