@@ -328,11 +328,6 @@ svg {
     fill: var(--binary-white);
     size: 24px;
 }
-#ig-icon {
-    fill: #E1306C;
-    size: 24px;
-}
-
 /*-------------------------- Interests Section --------------------------*/
 #interests {
     margin: 0.75rem;
